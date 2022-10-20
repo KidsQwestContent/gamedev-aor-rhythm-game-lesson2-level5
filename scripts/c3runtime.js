@@ -4087,7 +4087,10 @@ self.C3_ExpressionFuncs = [
 		() => "count_down",
 		() => "GAME OVER",
 		() => "level5a",
-		() => 2.75,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() * 3);
+		},
 		() => "playing",
 		p => {
 			const n0 = p._GetNode(0);
